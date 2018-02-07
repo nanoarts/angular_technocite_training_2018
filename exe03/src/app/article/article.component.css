@@ -1,0 +1,44 @@
+.aligned_votes {
+  background: grey;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  float: left;
+  font-size: 2em;
+}
+
+.sliceArt {
+  font-size: 20px;
+  font-style: italic;
+  margin: 0 10px;
+  color: lightgrey;
+}
+
+.list_voters {
+  list-style: none;
+}
+
+.list_voters .item a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  background: lightgreen;
+  float: left;
+}
+
+.list_voters .item-last a{
+  background: lightcoral;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+
+  float: left;
+}
+
+
+.link_large {
+  text-decoration: none;
+
+}

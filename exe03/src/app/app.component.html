@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<h1> {{title}} </h1>
+<form action="" name="formLink" class="formLink">
+  <label for="title">Title
+    <input type="text" name="title" #newTitle>
+  </label>
+  <label for="link">Link
+    <input type="text" name="link" #newLink>
+  </label>
+  <input (click)="addArticle(newTitle , newLink)" type="button" value="submit" class="button">
+</form>
+
+<app-article *ngFor="let article of articles" [article]="article"></app-article>

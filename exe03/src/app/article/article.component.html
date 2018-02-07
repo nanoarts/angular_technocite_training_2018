@@ -1,0 +1,29 @@
+<div class="aligned_votes">
+  <div>
+    <div class="value">
+      {{ article.votes }}
+    </div>
+    <div class="label">
+      points
+    </div>
+  </div>
+</div>
+<div>
+  <a href="{{article.link}}" class="link_large">
+    {{article.title}}
+  </a>
+  <div class="sliceArt"> ({{article.domain()}}) </div>
+  <ul class="list_voters">
+    <li class="item">
+      <a href="#" (click)="voteUp()">
+        upvote
+      </a>
+    </li>
+    <li class="item-last">
+      <a href="#" (click)="voteDown()">
+        downvote
+      </a>
+    </li>
+
+  </ul>
+</div>
