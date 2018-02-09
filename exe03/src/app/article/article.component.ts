@@ -12,6 +12,7 @@ export class ArticleComponent implements OnInit {
   @Input() article: Article;
 
   constructor() {
+
     // this.votes = 35;
     // this.link = 'http://angular.io';
     // this.title = 'Angular is the best';

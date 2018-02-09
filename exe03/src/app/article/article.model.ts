@@ -1,7 +1,7 @@
 export class Article {
-  private title: string;
-  private link: string;
-  private votes: number;
+   title: string;
+   link: string;
+   votes: number;
   // private Domaine: string;
 
 

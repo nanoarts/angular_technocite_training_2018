@@ -11,4 +11,4 @@
   <input (click)="addArticle(newTitle , newLink)" type="button" value="submit" class="button">
 </form>
 
-<app-article *ngFor="let article of articles" [article]="article"></app-article>
+<app-article *ngFor="let article of sortedArticles()" [article]="article"></app-article>
