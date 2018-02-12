@@ -1,0 +1,22 @@
+<div>
+  <h2>DEMO FOR FORM ANGULAR 4</h2>
+
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui_form">
+
+    <div class="field">
+      <label for="skuInput" class="skuInput">SKU</label>
+      <input type="text" id="skuInput" placeholder="SKU" name="sku" [formControl]="myForm.controls['sku']">
+      <div *ngIf="!sku.valid">ERROR SKU</div>
+    </div>
+    <div class="field">
+      <label for="emailInput" class="emailInput">email</label>
+      <input type="text" id="emailInput" placeholder="Email" name="email" [formControl]="myForm.controls['email']">
+    </div>
+    <div *ngIf="email.hasError('required')">ERROR is required</div>
+    <div *ngIf="email.hasError('email')">ERROR is valid email</div>
+
+
+    <button type="submit" class="button">Submit </button>
+
+  </form>
+</div>

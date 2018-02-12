@@ -7,6 +7,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductRowComponent } from './product-row/product-row.component';
 import { ProductImageComponent } from './product-image/product-image.component';
 import { ProductDepartmentComponent } from './product-department/product-department.component';
+import { ProductService } from './product.service';
 
 
 @NgModule({
@@ -15,12 +16,14 @@ import { ProductDepartmentComponent } from './product-department/product-departm
     ProductsListComponent,
     ProductRowComponent,
     ProductImageComponent,
-    ProductDepartmentComponent
+    ProductDepartmentComponent,
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

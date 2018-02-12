@@ -3,11 +3,10 @@ import {
   OnInit,
   Input,
   HostBinding,
-  Output,
-  EventEmitter
 } from '@angular/core';
 import { Product } from '../product.model';
 // import { Output } from '@angular/core/src/metadata/directives';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product-row',
@@ -16,14 +15,12 @@ import { Product } from '../product.model';
 })
 export class ProductRowComponent implements OnInit {
   @Input() product: Product;
-  @Output() onSelectedProduct: EventEmitter<Product>;
   @HostBinding('attr.class') cssClass = 'item';
-  constructor() {
-    this.onSelectedProduct = new EventEmitter();
-  }
+  constructor( private productService: ProductService) {}
+
   selectItem(product: Product) {
-    // console.log('Product Row', product);
-    this.onSelectedProduct.emit(product);
+    this.productService.deleteProduct(product);
   }
-  ngOnInit() {}
+
+  ngOnInit() { }
 }
